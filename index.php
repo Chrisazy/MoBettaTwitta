@@ -36,14 +36,11 @@ if(isset($_GET['id'])) {
 		exit("{error:'Missing tweet in create'}");
 	// K, we have the tweet
 	$sql = "INSERT INTO tweets SET tweet=?";
-	$conn->beginTransaction();
 	$stmt = $conn->prepare($sql);
 	$stmt->execute(array($_REQUEST['tweet']));
 	$id = $conn->lastInsertId();
-	$conn->commit();
 	$ret = array(
 		"id" => $id
 	);
 	exit(json_encode($ret));
 }
-?>
