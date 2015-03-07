@@ -24,4 +24,8 @@ if(!isset($_GET['id'])) {
 		echo "<br>";
 	}
 }
+
+function getTweet($id) {
+	return "nothing";
+}
 ?>
