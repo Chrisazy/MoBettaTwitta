@@ -1,5 +1,7 @@
 <?php
 if(!isset($_GET['id'])) {
+	// No id
+} else {
 	$host = "us-cdbr-azure-east2-d.cloudapp.net";
     $user = "b34779233e0057";
     $pwd = "2f7abdff";
@@ -12,7 +14,6 @@ if(!isset($_GET['id'])) {
     catch(Exception $e){
         die(var_dump($e));
     }
-} else {
 	$text = getTweet($_GET['id']);
 	if(isset($_REQUEST['raw'])) {
 		// Encode in a JSON Object and print that
