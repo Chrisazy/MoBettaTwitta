@@ -18,6 +18,7 @@ if(!isset($_GET['id'])) {
 	$text = getTweet($_GET['id']);
 	if(isset($_REQUEST['raw'])) {
 		// Encode in a JSON Object and print that
+		exit(json_encode($text));
 	} else {
 		// They just cicked the link...Dang.
 		echo "Well, here's the link for ".$_GET['id'];
@@ -26,6 +27,10 @@ if(!isset($_GET['id'])) {
 }
 
 function getTweet($id) {
-	return "nothing";
+	$sql = "SELECT tweet FROM tweets WHERE id=?";
+	$stmt = $conn->prepare($sql,array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+	$stmt->execute(array($id));
+	$res = $stmt->fetchAll();
+	return $res["tweet"];
 }
 ?>
