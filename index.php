@@ -1,5 +1,6 @@
 <?php
 ini_set("display_errors",1);
+header("Access-Control-Allow-Origin: *");
 $host = "us-cdbr-azure-east2-d.cloudapp.net";
 $user = "b34779233e0057";
 $pwd = "2f7abdff";
