@@ -1,4 +1,5 @@
 <?php
+phpinfo();
 if(!isset($_GET['id'])) {
 	// No id
 } else {
