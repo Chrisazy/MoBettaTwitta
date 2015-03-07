@@ -7,6 +7,7 @@ if(!isset($_GET['id'])) {
     $user = "b34779233e0057";
     $pwd = "2f7abdff";
     $db = "MoBettaAZO1IzF59;";
+    $conn = null;
     // Connect to database.
     try {
         $conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
