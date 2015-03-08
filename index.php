@@ -38,7 +38,7 @@ if(isset($_GET['id'])) {
  			   <meta name="viewport" content="width=device-width, initial-scale=1">
   			  <title>MoBettaTwitta</title>';
 		echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">';
-		echo '<link rel="stylesheet" href="https://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">';
+		echo '<link rel="stylesheet" href="jumbotron-narrow.css">';
 		echo '</head>';
 		echo '<body>';
 		echo '<div class="container">';
