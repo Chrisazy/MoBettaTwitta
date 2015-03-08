@@ -29,11 +29,40 @@ if(isset($_GET['id'])) {
 		// Encode in a JSON Object and print that
 		exit(json_encode(array("tweet"=>$text)));
 	} else {
-		echo "Looks like you don't have the script installed!<br>";
-		echo "<a href='https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/'>Click Here</a> to install Greasemonkey for Firefox<br>";
-		echo "<a href='https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en'>Click Here</a> to install Tampermonkey for Chrome<br>";
-		echo "After you have one of these, <a href='MoBettaTwitta.user.js'>Click Here</a> to install the script.<br><br>";
-		exit($text);
+
+		echo '<!DOCTYPE html>
+				<html lang="en">
+ 				 <head>
+ 				   <meta charset="utf-8">
+ 			   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 			   <meta name="viewport" content="width=device-width, initial-scale=1">
+  			  <title>MoBettaTwitta</title>';
+		echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">';
+		echo '<link rel="stylesheet" href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css">';
+		echo '</head>';
+		echo '<body>';
+		echo '<div class="container">';
+		?>
+		<div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/">Greasemonkey</a></li>
+            <li role="presentation"><a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en">Tampermonkey</a></li>
+            <li role="presentation" class="active"><a href="MoBettaTwitta.user.js">Userscript</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">MoBettaTwitta</h3>
+      </div>
+
+		<?php
+		echo "<div class='jumbotron'>";
+		echo "<h1>MoBetta Tweet</h1>";
+		echo '<p class="lead">';
+		echo $text;
+		echo '</p>';
+		echo '</div>';
+		echo "</div>";
+		echo '</body></html>';
 	}
 } else if(isset($_REQUEST['create'])) {
 	if(!isset($_REQUEST['tweet']))
