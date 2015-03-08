@@ -60,6 +60,7 @@ if(isset($_GET['id'])) {
 		echo '<p class="lead">';
 		echo $text;
 		echo '</p>';
+		echo '<h6>To see this tweet on Twitter.com, install Greasemonkey (Firefox) or Tampermonkey (Chrome). Once installed, click the Userscript button to install the script, then just view on Twitter!</h6>';
 		echo '</div>';
 		echo "</div>";
 		echo '</body></html>';
