@@ -29,6 +29,10 @@ if(isset($_GET['id'])) {
 		// Encode in a JSON Object and print that
 		exit(json_encode(array("tweet"=>$text)));
 	} else {
+		echo "Looks like you don't have the script installed!";
+		echo "<a href='https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/'>Click Here</a> to install Greasemonkey for Firefox<br>";
+		echo "<a href='https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en'>Click Here</a> to install Tampermonkey for Chrome<br>";
+		echo "After you have one of these, <a href='MoBettaTwitta.user.js'>Click Here</a> to install the script.<br><br>";
 		exit($text);
 	}
 } else if(isset($_REQUEST['create'])) {
