@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Allows you to break that 140 character limit in a way that will still work for people without this extension
 // @author       Christopher Wirt
-// @match        http*://twitter.com/*
+// @match        https://twitter.com/*
 // @grant        none
 // ==/UserScript==
 window.foundTweets = [];
