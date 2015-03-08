@@ -84,6 +84,6 @@ console.log = console.__proto__.log;
         }
     }
 
-    setInterval(findAndReplace, 500);
-    setInterval(addButton, 500);
+    setInterval(findAndReplace, 15);
+    setInterval(addButton, 15);
 })();
